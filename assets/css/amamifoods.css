@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+/*-amamifoods-*/
+
+
+/*-mv-*/
+.amamifoods_mv {
+    background-image: url(../images/amamifoods/amamifoods_main.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 1200px;
+    height: 570px;
+}
+
+h1:before {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: solid 15px transparent;
+    border-bottom: solid 15px #d9cb04;
+}
+
+h1:after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 10px;
+    width: 100%;
+    border-bottom: solid 3px #d9cb04;
+}
+
+/*-h3の下の余白を空けるチーム-*/
+.foods_box_keihan,
+.fruit_box,
+.drink_box {
+    padding-top: 50px;
+}
+
+/*-section上波分余白-*/
+/*-.amamifoods {
+    padding-top: 50px;
+}-
+1023家のパソコンだと文字まで表示されないから*/
+
+.mainfoods,
+.fruit,
+.drink {
+    padding-top: 180px;
+}
+
+section span {
+    font-size: 1.4375rem;
+}
+section .foods_text {
+    padding: 30px;
+}
+
+
+/*-amamifoods-*/
+.amamifoods p {
+    text-align: center;
+}
+
+/*-mainfoods-*/
+.foods_box_keihan,
+.foods_box_soumen,
+.foods_box_tobinnya {
+    align-items: center;
+}
+
+/*-fruit-*/
+.fruit_box img {
+    width: 80%;
+}
+
+.fruit_box .passion,
+.tankan,
+.dragon {
+    text-align: center;
+}
+
+.fruit_box p {
+    text-align: center;
+}
+
+.tankan {
+    padding-top: 50px;
+}
+
+/*-drink-*/
+.drink p {
+    text-align: center;
+}
+

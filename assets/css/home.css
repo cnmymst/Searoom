@@ -1,0 +1,302 @@
+@charset "UTF-8";
+
+
+/*--*/
+section {
+    padding-bottom: 50px;
+    padding-top: 150px;
+    /*-波の高さ-*/
+}
+
+/*-slide-*/
+.slide img {
+    border-radius: 50px;
+}
+
+/*-スライドショー追記-*/
+#slide ul {
+    position: relative;
+}
+
+#slide li {
+    position: absolute;
+    width: 100%;
+}
+
+/*--*/
+#button {
+    padding-top: 610px;
+    text-align: center;
+}
+
+#button ul {
+    display: inline-block;
+}
+
+#button ul li {
+    float: left;
+    margin-right: 20px;
+}
+
+#button ul li:last-child {
+    margin-right: 0;
+}
+
+#button ul li a {
+    text-indent: -9999px;
+    text-decoration: none;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+#button ul li a.target {
+    background: #d9cb04;
+}
+
+/*-レスポンシブで使う画像消しとく-*/
+.res_main {
+    display: none;
+}
+
+
+
+/*-h1見出し-*/
+h1:before {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: solid 15px transparent;
+    border-bottom: solid 15px #fff;
+}
+
+h1:after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 10px;
+    width: 100%;
+    border-bottom: solid 3px #fff;
+}
+
+h3 {
+    font-weight: normal;
+    border-bottom: 5px dotted #A1BBD0;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*-h_whats-*/
+.h_whats_box {
+    padding: 30px;
+}
+
+.h_whats_box p {
+    padding: 20px;
+}
+
+.h_whats_btn {
+    justify-content: center;
+}
+
+.h_whats_btn p {
+    padding: 10px 30px;
+}
+
+
+/*-h_foods-*/
+.h_foods_box {
+    padding: 60px 30px;
+}
+
+.h_foods_box p {
+    padding: 20px;
+}
+
+.h_foods_h1 {
+    margin-left: -200px;
+}
+
+.h_foods_btn p {
+    text-align: center;
+}
+
+/*-h_rooms-*/
+.h_rooms {
+    background-image: url(../images/h_rooms.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 750px;
+    width: 1200px;
+}
+
+.h_rooms_box {
+    padding: 30px;
+}
+
+.h_rooms_btn {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 500px;
+}
+
+.h_rooms_btn p {
+    padding-left: 100px;
+}
+
+/*-h_price-*/
+.h_plan .plan1 a {
+    width: 450px;
+    height: 400px;
+    background-image: url(../images/h_plan1.png);
+    display: block;
+    text-indent: -9999px;
+    border-radius: 50px;
+    box-shadow: 0 5px 0 #000;
+    display: inline-block;
+    transition: .1s;
+}
+
+.h_plan .plan2 a {
+    width: 450px;
+    height: 400px;
+    background-image: url(../images/h_plan2.png);
+    display: block;
+    text-indent: -9999px;
+    border-radius: 50px;
+    box-shadow: 0 5px 0 #000;
+    display: inline-block;
+    transition: .1s;
+}
+
+.h_plan .plan1 a:hover,
+.h_plan .plan2 a:hover {
+    opacity: 90%;
+    transform: translateY(5px);
+    box-shadow: 0 0 0 #000;
+}
+
+.h_plan {
+    margin: 40px 80px;
+}
+
+.h_price p {
+    text-align: center;
+    padding: 20px;
+}
+
+.h_price .h_price_tel {
+    font-size: 1.875rem;
+}
+
+
+
+
+/*--レスポンシブ共通--*/
+
+@media screen and (max-width:640px) {
+    /*--640px以下で適用--*/
+
+    /*- 1.テンプレートを書く -*/
+
+    /*-res mv-*/
+    .res_main {
+        display: block;
+    }
+
+    .res_main img {
+        border-radius: 30px;
+        margin: 120px 0;
+    }
+
+
+    /*- 2.いらないものを消す -*/
+    .h_plan .plan1 a:hover,
+    .h_plan .plan2 a:hover {
+        box-shadow: none;
+    }
+
+    #slide,
+    #button {
+        display: none;
+    }
+
+
+
+    /*- 3.段組みの解除 -*/
+    .h_whats {
+        flex-direction: column-reverse;
+    }
+
+
+    /*- 4.widthの調整 -*/
+    .h_rooms {
+        width: 100%;
+    }
+
+    h1 {
+        width: 80%;
+    }
+
+    .h_foods_h1 {
+        margin: auto;
+    }
+
+    .h_whats_btn p {
+        text-align: center;
+    }
+
+    .h_rooms_btn p {
+        padding-left: 0;
+    }
+
+    .h_plan {
+        margin: auto;
+    }
+
+    .h_plan .plan1 a {
+        width: 80%;
+        height: 300px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        box-shadow: none;
+        text-align: center;
+    }
+
+    .h_plan .plan2 a {
+        width: 80%;
+        height: 300px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        box-shadow: none;
+    }
+
+    .h_rooms_btn {
+        margin-top: 300px;
+    }
+
+
+    /*- 5.余白の取り直し -*/
+
+    .plan1,
+    .plan2 {
+        text-align: center;
+        padding-top: 30px;
+    }
+
+
+    /*--*/
+
+
+
+}

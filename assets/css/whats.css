@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+/*-mv-*/
+.whats_mv {
+    background-image: url(../images/whats/whats_main.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 1200px;
+    height: 570px;
+}
+.whats_mv_non {
+    height: 300px;
+}
+
+
+/*-section上波分余白-*/
+.whats_main,
+.whats_plan {
+    padding-top: 180px;
+}
+
+section{
+    padding-bottom: 20px;
+}
+
+/*-h-*/
+.h3_white{
+    color: #fff;
+}
+h4 {
+    text-align: center;
+    padding: 10px;
+    font-size: 2.1875rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+
+/*-whats-*/
+.whats_text{
+    padding: 30px;
+}
+.whats_text,
+.whats_btn{
+    text-align: center;
+}
+
+.whats_main{
+    font-size: 1.25rem;
+    text-shadow:
+    2px 2px 2px #fff,
+    /* 右下 */
+    -2px -2px 2px #fff,
+    /* 左上 */
+    2px 2px 2px #fff,
+    /* 右下 */
+    -2px -2px 2px #fff,
+    /* 左上 */
+    2px 2px 2px #fff,
+    /* 右下 */
+    -2px -2px 2px #fff,
+    /* 左上 */
+    2px 2px 2px #fff,
+    /* 右下 */
+    -2px -2px 2px #fff,
+    /* 左上 */
+    2px 2px 2px #fff,
+    /* 右下 */
+    -2px -2px 2px #fff,
+    /* 左上 */
+    2px -2px 2px #fff,
+    /* 右上 */
+    -2px 2px 2px #fff,
+    /* 左下 */
+    2px 2px 2px #fff,
+    /* 右下 */
+    -2px -2px 2px #fff,
+    /* 左上 */
+    2px -2px 2px #fff,
+    /* 右上 */
+    -2px 2px 2px #fff;
+    /* 左下 */
+}
+.whats_main_photo{
+    background-image: url(../images/whats/whats_m_p1.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 800px;
+    height: 800px;
+
+    margin-right: 0;
+    margin-left: auto;
+}
+.whats_main_photo2{
+    background-image: url(../images/whats/whats_m_p2.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 800px;
+    height: 800px;
+
+}
+
+.whats_main span{
+    font-size: 1.875rem;
+    font-weight: bold;
+}
+.whats_h3{
+    font-size: 2.1875rem;
+}
+.whats_photo_text1{
+    padding-top: 220px;
+    margin-left: -300px;
+}
+.whats_photo_text2{
+    padding-top: 220px;
+    margin-left: 300px;
+    width: 100%;
+}
+   
+
+/*-plan-*/
+.whats_box{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.whats_box .text{
+    font-size: 1rem;
+}
+.whats_box .time{
+    font-size: 1.875rem;
+    font-weight: bold;
+    width: 150px;
+    border-top: 5px solid #3f4234;
+    border-bottom: 5px solid #3f4234;
+
+    margin-bottom: 20px;
+}
+
+.whats_plan img{
+    border-radius: 30px;
+    text-align: center;
+}
+.whats_plan p{
+    text-align: center;
+}
+
+.whats_title{
+    margin-left: 20px;
+}
+.whats_title span{
+    border-bottom: 5px double #fff;
+    width: 200px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.whats_title p{
+    margin-bottom: 20px;
+}
+.whats_title .text{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    padding: 20px 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

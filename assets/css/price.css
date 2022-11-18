@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/*-mv-*/
+.price_mv {
+    background-image: url(../images/price/price_main.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 1200px;
+    height: 570px;
+}
+.price_mv2 {
+    background-image: url(../images/price/price_main2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 1200px;
+    height: 570px;
+}
+
+
+/*-section上波分余白-*/
+.main_price,
+.rental {
+    padding-top: 180px;
+}
+
+section{
+    padding-bottom: 20px;
+}
+
+/*-price-*/
+.price_text{
+    padding: 30px;
+}
+.price_text,
+.price_btn,
+.rental p,
+.contact_btn{
+    text-align: center;
+}
+
+/*-dl dt dd-*/
+.main_price dl,
+.cancel dl,
+.rental dl{
+    text-align: center;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 1.4375rem;
+}
+.main_price dt,
+.cancel dt,
+.rental dt{
+    float: left;
+    clear: left;
+    width: 300px;
+    border-bottom: 5px dotted #f4e7d7;
+}
+.main_price dd,
+.cancel dd{
+    border-bottom: 5px dotted #A1BBD0;
+}
+.rental dd{
+    border-bottom: 5px dotted #fff;
+}
+
+
+
+/*--*/
+.price_btn2{
+    padding: 20px;
+}
+

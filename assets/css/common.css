@@ -1,0 +1,757 @@
+@charset "UTF-8";
+
+/*-
+12px 0.75rem
+navi小文字
+
+16px 1rem
+　基本
+20px 1.25rem
+
+23px 1.4375rem
+navi文字
+
+25px 1.5625rem
+27px 1.6875rem
+h1見出し
+
+30px 1.875rem
+35px 2.1875rem
+
+main #3f4234
+point #d9cb04
+sand #f4e7d7
+marine #A1BBD0
+-*/
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    padding-top: 80px;
+    /*-navの高さ-*/
+    color: #3f4234;
+    letter-spacing: 3px;
+}
+
+/*-共通class-*/
+.ds_f {
+    display: flex;
+}
+
+.jc_sb {
+    justify-content: space-between;
+}
+
+.inner {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.respon_index {
+    display: none;
+}
+
+/*-見出し下線ありh1-*/
+h1 {
+    font-size: 1.6875rem;
+    font-weight: normal;
+    padding: 0 20px;
+    position: relative;
+    padding-left: 25px;
+    width: 550px;
+}
+
+/*-見出し中央揃えh3-*/
+h3 {
+    text-align: center;
+    font-size: 1.6875rem;
+    padding: 20px;
+}
+
+/*-catch-*/
+.catch {
+    color: #fff;
+    font-size: 5rem;
+    font-weight: bold;
+    padding-top: 200px;
+    padding-left: 80px;
+    text-shadow:
+        1px 1px 1px #fff,
+        /* 右下 */
+        -1px -1px 1px #fff;
+        /* 左上 */
+}
+
+
+/*-nav-*/
+.nav_list li {
+    font-size: 1.4375rem;
+    /*-23px-*/
+    font-weight: bold;
+    /*-押せる範囲広げる-*/
+    display: inline-block;
+    letter-spacing: normal;
+}
+
+header .index {
+    width: 100%;
+    /* 幅いっぱいを指定 */
+    height: 80px;
+    /* navの高さと一致させる */
+    background: #A1BBD0;
+    box-sizing: border-box;
+    /* padding分を含んで幅を100%にするため */
+    position: fixed;
+    /* ウィンドウを基準に画面に固定 */
+    top: 0;
+    /* 上下の固定位置を上から0pxにする */
+    left: 0;
+    /* 左右の固定位置を左から0pxにする */
+    z-index: 100000;
+    padding-left: 30px;
+}
+
+.index::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: -0%;
+    top: 55%;
+    z-index: -1;
+    display: block;
+    height: 80px;
+    background-size: 1260px 100%;
+    background-image: url(../images/nami.svg);
+}
+
+/*-NAV二行目入れる-*/
+.nav_list a {
+    padding: 10px;
+    display: block;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.nav_list a::after {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: lighter;
+}
+
+.nav_whats a::after {
+    content: "国直とは";
+}
+
+.nav_amamifoods a::after {
+    content: "奄美大島のごはん";
+}
+
+.nav_rooms a::after {
+    content: "施設紹介";
+}
+
+.nav_price a::after {
+    content: "料金";
+}
+
+.nav_access a::after {
+    content: "アクセス";
+}
+
+.nav_resevecontact a::after {
+    content: "予約/問い合わせ";
+}
+
+/*-hover-*/
+.nav_home a:hover,
+.nav_whats a:hover,
+.nav_amamifoods a:hover,
+.nav_rooms a:hover,
+.nav_price a:hover,
+.nav_access a:hover,
+.nav_resevecontact a:hover {
+    opacity: 60%;
+    color: #3f4234;
+}
+
+/*-カレント-*/
+.nav_list>li.current>a {
+    background-color: #fff;
+    border-radius: 0 0 50px 50px;
+    color: #A1BBD0;
+}
+
+
+/*-logo固定-*/
+.logo {
+    position: fixed;
+    /* ウィンドウを基準に画面に固定 */
+    top: 0;
+    /* 上下の固定位置を上から0pxにする */
+    /*-カルクで画面計算-*/
+    left: calc((100vw - 1300px)/2);
+    /* 左右の固定位置を左から0pxにする */
+    display: flex;
+    /* 中の要素を横並びにする */
+    z-index: 300000;
+}
+
+.logo a:hover {
+    opacity: .9;
+}
+
+/*-CONTACT固定-*/
+.contact {
+    position: fixed;
+    /* ウィンドウを基準に画面に固定 */
+    bottom: 0;
+    /* 上下の固定位置を上から0pxにする */
+    right: calc((100vw - 1250px)/2);
+    /* 左右の固定位置を左から0pxにする */
+    display: flex;
+    /* 中の要素を横並びにする */
+    z-index: 300000;
+}
+
+.contact a:hover {
+    opacity: .9;
+}
+
+/*-押せるボタン-*/
+.home_btn1 {
+    position: relative;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 50px;
+    color: #3f4234;
+    text-align: center;
+    letter-spacing: normal;
+    display: inline-block;
+}
+
+.home_btn1 a {
+    text-decoration: none;
+    color: #3f4234;
+    padding: 10px 55px;
+    display: block;
+}
+
+.home_btn1:hover {
+    background-color: #d9cb04;
+}
+
+.home_btn1::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
+    padding-left: 0.2rem;
+    font-weight: bold;
+    content: '▶';
+    transition: 500ms;
+}
+
+.home_btn1:hover::after {
+    right: 0.2rem;
+    color: #000;
+    content: '▶';
+}
+
+/*-home roomsだけ共通-*/
+/*-h_instagram-*/
+.h_instagram a {
+    margin: 20px;
+}
+
+.h_instagram a:hover {
+    opacity: 0.6;
+}
+
+.h_instagram img {
+    border-radius: 10px;
+}
+
+.h_instagram_box {
+    padding: 20px;
+}
+
+/*-h_info-*/
+
+/*-osirase-*/
+.h_info_box dl {
+    width: 400px;
+    padding: 20px 40px;
+}
+
+.h_info_box dt {
+    float: left;
+    clear: left;
+    width: 200px;
+}
+
+.h_info_box dt,
+dd {
+    margin-bottom: 10px;
+}
+
+/*-tubuyaki-*/
+.h_twitter {
+    padding: 20px;
+}
+
+
+
+/*-なみなみの戦い-*/
+.non_sand {
+    background-color: #f4e7d7;
+}
+
+.sand {
+    background-color: #f4e7d7;
+    position: relative;
+}
+
+.sand::after {
+    content: '';
+    position: absolute;
+    bottom: -138px;
+    height: 140px;
+    z-index: 1;
+    display: block;
+    /*-width: calc(100vw - 21px);-*/
+    width: 100%;
+    background-size: 1260px 100%;
+    background-image: url(../images/bg_sand.svg);
+}
+
+.marine {
+    background-color: #A1BBD0;
+    position: relative;
+}
+
+.marine::after {
+    content: '';
+    position: absolute;
+    bottom: -138px;
+    height: 140px;
+    z-index: 1;
+    display: block;
+    /*-width: calc(100vw - 21px);-*/
+    width: 100%;
+    background-size: 1260px 100%;
+    background-image: url(../images/bg_marin.svg);
+}
+
+.white {
+    background-color: #fff;
+    position: relative;
+}
+
+.white::after {
+    content: '';
+    position: absolute;
+    bottom: -138px;
+    height: 140px;
+    z-index: 1;
+    display: block;
+    /*-width: calc(100vw - 21px);-*/
+    width: 100%;
+    background-size: 1260px 100%;
+    background-image: url(../images/bg_white.svg);
+}
+
+
+
+/*-footer-*/
+.f_marine {
+    background-color: #A1BBD0;
+    position: relative;
+}
+
+.f_marine::before {
+    content: '';
+    position: absolute;
+    /*-relativeした場所が基準-*/
+    top: -19px;
+    height: 20px;
+    z-index: 1;
+    display: block;
+    /*-width: calc(100vw - 21px);-*/
+    width: 100%;
+    background-size: 1260px 100%;
+    background-image: url(../images/f_nami.svg);
+}
+
+footer .add {
+    align-items: center;
+}
+
+.f_box1,
+.f_box2,
+.f_box3 {
+    width: 200px;
+    padding: 20px;
+}
+
+footer .f_box1 p {
+    color: #fff;
+    padding-bottom: 5px;
+}
+
+footer .f_box3 p {
+    color: #A1BBD0;
+    padding-bottom: 5px;
+}
+
+address {
+    font-style: normal;
+}
+
+.f_logo {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.5625rem;
+    text-align: center;
+}
+
+.copy {
+    text-align: center;
+}
+
+
+/*-totop-*/
+.totop {
+    animation: fuwafuwa 2s infinite ease-in-out;
+    justify-content: right;
+    /*-display:flex;かけないとかからない！神-*/
+}
+
+@keyframes fuwafuwa {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, -20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+
+/*-下からふわっ-*/
+.element {
+    /* 最初は非表示 */
+    transform: translateY(80px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 1s, opacity 1s, visibility 1s;
+}
+
+.element2 {
+    /* 最初は非表示 */
+    transform: translateY(130px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 1s, opacity 1s, visibility 1s;
+}
+
+.element3 {
+    /* 最初は非表示 */
+    transform: translateY(180px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 1s, opacity 1s, visibility 1s;
+}
+
+.element4 {
+    /* 最初は非表示 */
+    transform: translateY(230px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 1s, opacity 1s, visibility 1s;
+}
+
+/* フェードイン時に入るクラス */
+.is-fadein {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/*-その場でふわっ-*/
+.fadeIn {
+    animation-name: fadeInAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInAnime {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn {
+    /*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+    position: fixed;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+
+    z-index: 900000;
+
+    right: 30px;
+    top: 30px;
+}
+
+/*ボタン内側*/
+.openbtn span {
+    display: inline-block;
+    transition: all .4s;
+    /*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background: #d9cb04;
+    width: 70%;
+}
+
+.openbtn span:nth-of-type(1) {
+    top: 15px;
+}
+
+.openbtn span:nth-of-type(2) {
+    top: 23px;
+}
+
+.openbtn span:nth-of-type(3) {
+    top: 31px;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 70%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+    /*真ん中の線は透過*/
+}
+
+.openbtn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 70%;
+}
+
+
+
+
+
+/*--レスポンシブ共通--*/
+
+@media screen and (max-width:640px) {
+    /*--640px以下で適用--*/
+
+    /*- 1.テンプレートを書く -*/
+    .inner {
+        width: auto;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .wrap {
+        overflow: hidden;
+    }
+
+    body {
+        padding-top: 0;
+    }
+
+    .respon_index {
+        display: block;
+    }
+
+
+    /*- 2.いらないものを消す -*/
+    nav {
+        display: none;
+    }
+
+    .nav_list a::after {
+        display: none;
+    }
+
+    .nav_whats a::after,
+    .nav_amamifoods a::after,
+    .nav_rooms a::after,
+    .nav_price a::after,
+    .nav_access a::after,
+    .nav_resevecontact a::after {
+        display: none;
+    }
+
+
+    /*- 3.段組みの解除 -*/
+    .ds_f {
+        flex-direction: column;
+    }
+
+    /*- 4.widthの調整 -*/
+    .h_instagram a {
+        margin: 5px;
+        width: 180px;
+    }
+
+    .h_instagram_box {
+        flex-direction: unset;
+    }
+
+    .h_twitter {
+        flex-direction: column-reverse;
+    }
+
+    .h_twitter p {
+        width: 60%;
+    }
+
+    .h_twitter .twitter {
+        padding-left: 150px;
+    }
+
+    .h_info_box dl {
+        width: auto;
+    }
+
+
+    /*- 5.余白の取り直し -*/
+
+    footer {
+        height: 500px;
+    }
+
+
+
+
+    /*-固定-*/
+    .logo {
+        position: fixed;
+        /* ウィンドウを基準に画面に固定 */
+        top: 0;
+        /* 上下の固定位置を上から0pxにする */
+        left: 0;
+        z-index: 300000;
+    }
+    .logo img {
+        width: 70%;
+    }
+
+    /*--*/
+    .contact {
+        position: fixed;
+        /* ウィンドウを基準に画面に固定 */
+        bottom: 0;
+        /* 上下の固定位置を上から0pxにする */
+        right: 0;
+        z-index: 300000;
+        width: 80%;
+    }
+    .contact img {
+        width: 80%;
+    }
+
+    /*--*/
+    .totop a {
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+
+
+
+    /*  ハンバーガー  */
+
+    .respon_nav_list {
+        z-index: 300000;
+        width: 100%;
+        height: 100vh;
+        background-color: #A1BBD0;
+
+        display: flex;
+        flex-direction: column;
+        transition: .5s;
+        position: fixed;
+        top: -200%;
+    }
+
+    .respon_nav_list.open {
+        top: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-top: 50%;
+    }
+
+    .respon_nav_list li {
+        height: 60px;
+        text-align: center;
+
+    }
+
+    .respon_nav_list li a {
+        padding: 10px 0;
+        font-size: 1.5rem;
+        display: block;
+        color: #fff;
+    }
+
+
+
+
+}
