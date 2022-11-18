@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!--RESERVE/CONTACT-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>RESERVE/CONTACT | ゲストハウス Searoom</title>
+
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/reservecontact.css">
+    <link rel="icon" href="../favicon.ico">
+
+    <script src="../assets/js/jquery-3.6.1.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/form.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="no-sand">
+            <!--画面固定LOGO-->
+            <p class="logo">
+                <a href="../index.html"><img src="../assets/images/Searoom_LOGO.png" alt="ゲストハウスSearoom">
+                </a>
+            </p>
+            <!--画面固定CONTACT-->
+            <p class="contact">
+                <a href="../reservecontact/index.html"><img src="../assets/images/Searoom_tel.png" alt="電話・予約・問い合わせ">
+                </a>
+            </p>
+
+            <nav class="index">
+                <ul class="nav_list inner ds_f jc_sb">
+                    <li class="nav_home">
+                        <a href="../index.html">HOME</a>
+                    </li>
+                    <li class="nav_whats">
+                        <a href="../whats/index.html">WHAT'S 国直</a>
+                    </li>
+                    <li class="nav_amamifoods">
+                        <a href="../amamifoods/index.html">AMAMI FOODS</a>
+                    </li>
+                    <li class="nav_rooms">
+                        <a href="../rooms/index.html">ROOMS</a>
+                    </li>
+                    <li class="nav_price">
+                        <a href="../price/index.html">PRICE
+                        </a>
+                    </li>
+                    <li class="nav_access">
+                        <a href="../access/index.html">ACCESS</a>
+                    </li>
+                    <li class="nav_resevecontact current">
+                        <a href="#">RESERVE/CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!--含めてここまで共通↑-->
+
+        <main>
+            <div class="sand">
+                <section class="rc inner fadeIn">
+                    <div class="rc_mv">
+                        <h2 class="catch">
+                            RESERVE/CONTACT
+                        </h2>
+                    </div>
+                    <p class="rc_text">
+                        思い立ったが吉日。<br>
+                        あなたに合ったプラン、奄美での過ごし方などのご相談も大歓迎★<br>
+                        お気軽に電話などでのお問い合わせ、お待ちしております。
+                    </p>
+                </section>
+            </div>
+            <div class="marine">
+                <section class="reserve inner element">
+                    <h3>
+                        ご予約
+                    </h3>
+                    <p>予約サイトとの時差があるので、電話でのお問い合わせ・ご予約がおすすめです！<br>
+                        <span class="reserve_tel">0997-77-9270</span>
+                    </p>
+                    <div class="reserve_btn">
+                        <p><span class="home_btn1"><a href="#" target="_blank">予約サイトへGO！GO！GO！</a></span></p>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="white">
+                <section class="contact_box element">
+                    <h3>
+                        お問い合わせ
+                    </h3>
+                    <div class="contact_form inner">
+
+
+                        <form action="#" method="POST">
+                            <dl>
+                                <!-- nameSection -->
+                                <div id="nameSection">
+                                    <dt>
+                                        <p class="form_title_hissu"><label for="name">お名前</label></p>
+                                    </dt>
+                                    <dd><input id="name" type="text" name="userName" placeholder="奄美　大島">
+                                        <span class="alert">未入力です！</span>
+                                    </dd>
+                                </div>
+
+                                <!-- kanaSection -->
+                                <div id="kanaSection">
+                                    <dt>
+                                        <p class="form_title_hissu"><label for="kana">ふりがな</label></p>
+                                    </dt>
+                                    <dd><input id="kana" type="text" name="userName" placeholder="あまみ　おおしま">
+                                        <span class="alert">未入力です！</span>
+                                    </dd>
+                                </div>
+
+                                <!-- mailSection -->
+                                <div id="mailSection">
+                                    <dt>
+                                        <p class="form_title_hissu"><label for="mail">メールアドレス</label></p>
+                                    </dt>
+                                    <dd><input id="mail" type="email" name="mail" placeholder="searoom@gmail.com">
+                                        <span class="alert">未入力です！</span>
+                                    </dd>
+                                </div>
+
+                                <!-- mail2Section -->
+                                <div id="mail2Section">
+                                    <dt>
+                                        <p class="form_title_hissu"><label for="mail2">メールアドレス(確認用)</label></p>
+                                    </dt>
+                                    <dd><input id="mail2" type="email" name="mail" placeholder="searoom@gmail.com">
+                                        <span class="alert">未入力です！</span>
+                                    </dd>
+                                </div>
+
+                                <!-- 回数Section -->
+                                <div class="selectSection2">
+                                    <dt>
+                                        <p class="form_title_nini">利用回数</p>
+                                    </dt>
+                                    <dd><input id="new" type="checkbox" name="use" value="new"><label
+                                            for="new">初めて</label>
+                                        <input id="second" type="checkbox" name="use" value="second"><label
+                                            for="second">2回目</label>
+                                        <input id="other" type="checkbox" name="use" value="other"><label
+                                            for="other">3回目以上</label>
+                                    </dd>
+                                </div>
+
+                                <!-- umuSection -->
+                                <div id="umuSection">
+                                    <dt>
+                                        <p class="form_title_hissu">返信の有無</p>
+                                    </dt>
+                                    <dd><label for="yes"><input id="yes" type="radio" name="reply"
+                                                value="yes">必要</label>
+                                        <label for="no"><input id="no" type="radio" name="reply" value="no">不要</label>
+                                        <span class="alert">未選択です！</span>
+                                    </dd>
+                                </div>
+
+                                <!-- textareaSection -->
+                                <div id="textareaSection">
+                                    <dt>
+                                        <p class="form_title_hissu"><label for="textarea">お問い合わせ内容</label></p>
+                                    </dt>
+                                    <dd><textarea id="textarea" name="textarea" placeholder="お気軽にどうぞ！"></textarea>
+                                        <span class="alert">未入力です！</span>
+                                    </dd>
+                                </div>
+                            </dl>
+
+                            <div class="submit">
+                                <p class="submit_text"><a href="#">プライバシーポリシー</a>に<input type="checkbox" id="check"
+                                        name="check">
+                                    <label for="check">同意する</label>
+                                </p>
+                                <p><input type="submit" id="submitBtn" value="確認画面へ進む" disabled></p>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </section>
+            </div>
+
+
+            <div class="non_sand">
+
+                <div class="rc_mv2 inner element">
+                </div>
+                <!--<main><div class="no_sand">込みでここから共通↓-->
+                <div class="totop inner ds_f">
+                    <a href="#">
+                        <img src="../assets/images/totop.png" alt="totop">
+                    </a>
+                </div>
+
+            </div>
+        </main>
+
+
+        <footer class="f_marine">
+            <div class="add inner ds_f jc_sb">
+                <div class="f_box1">
+                    <p>CHECK IN 15:00<br>
+                        CHECK OUT 10:00</p>
+                    <address>〒894-3101<br>
+                        鹿児島県大和村国直68<br>
+                        TEL:0997-77-9270
+                    </address>
+                </div>
+                <div class="f_box2">
+                    <p class="f_logo">GUEST HOUSE<br>
+                        Searoom</p>
+                </div>
+                <div class="f_box3">
+                    <p>隠れんぼ</p>
+                </div>
+            </div>
+            <p class="copy"><small>&copy;2022 Searoom amami</small></p>
+        </footer>
+    </div>
+</body>
+
+</html>
